@@ -1,0 +1,29 @@
+section#start .container {
+    height: 150px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+section#start .icons {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+}
+
+section#start i {
+    font-size: 50px;
+    margin: 0px 10px;
+}
+
+section#start i:first-child {
+    color: #3b5998;
+}
+
+section#start i:last-child {
+    color: #ea4335;
+}

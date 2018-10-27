@@ -1,0 +1,61 @@
+.row {
+    width: 100%;
+    height: 100px;
+}
+
+.message {
+    border-radius: 30px;
+    color: var(--light-color);
+    font-size: 18px;
+    padding: 30px;
+    width: 48%;
+}
+
+.is_typing div {
+    background-color: #eee;
+    border-radius: 30px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    width: 100px;
+}
+
+.user_message {
+    background-color: var(--primary-color);
+    float: left;
+}
+
+.friend_message {
+    background-color: var(--secondary-color);
+    float: right;
+}
+
+.form_fields {
+    bottom: 30px;
+    left: 0;
+    margin: 0 auto;
+    position: fixed;
+    right: 0;
+    width: 1200px;
+}
+
+.form_fields button,
+input#chat_message {
+    font-size: 22px;
+}
+
+.form_fields button {
+    background-color: var(--primary-color);
+    border-radius: 30px;
+    color: var(--light-color);
+    float: right;
+    padding: 30px;
+    width: 15%;
+}
+
+input#chat_message {
+    background-color: #eee;
+    border-radius: 30px;
+    padding: 30px;
+    width: 80%;
+}

@@ -1,0 +1,29 @@
+section#profile {
+    height: 100vh;
+}
+
+section#profile .wrapper {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%,-50%);
+}
+
+section#profile a {
+    background-color: var(--primary-color);
+    border-radius: 2px;
+    color: var(--light-color);
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    height: 75px;
+    margin: 10px auto;
+    line-height: 75px;
+    text-align: center;
+    transition: background 150ms ease-out;
+    width: 300px;
+}
+
+section#profile a:hover {
+    background-color: #032863;
+}

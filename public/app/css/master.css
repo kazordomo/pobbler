@@ -1,0 +1,56 @@
+/* RESETS */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+main {
+    --primary-color: #010f26;
+    --secondary-color: #006EFF;
+    --light-color: #ffffff;
+}
+
+.wrapper,
+.wrapper_large {
+    margin: 50px auto 0px auto;
+    position: relative;
+    max-width: 90%;
+}
+
+.wrapper {
+    width: 800px;
+}
+
+.wrapper_large {
+    width: 1200px;
+}
