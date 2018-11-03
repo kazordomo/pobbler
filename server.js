@@ -13,7 +13,7 @@ app.set('port', (process.env.PORT || 3000));
 
 io.on('connection', socket => {
 
-    socket.on('typing', () => io.emit('typing'));
+    socket.on('typing', user => io.emit('typing', user));
     socket.on('is not typing', () => io.emit('is not typing'));
     socket.on('message', ({user, message}) => io.emit('message', { user, message }));
 

@@ -2,17 +2,41 @@ nav {
     background-color: var(--primary-color);
     color: var(--light-color);
     height: 100px;
-    line-height: 100px;
     padding: 0px 50px;
+    position: relative;
 }
 
 nav h2 {
     float: left;
 }
 
+nav .actions,
+nav h2 {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%,-50%);
+}
+
+nav .actions {
+    right: 50px;
+}
+
 nav a {
     float: right;
-    margin-left: 30px;
+    margin-left: 50px;
+    position: relative;
+}
+
+nav a span {
+    background-color: #f2991d;
+    border-radius: 50%;
+    height: 25px;
+    line-height: 25px;
+    position: absolute;
+    text-align: center;
+    width: 25px;
+    top: 20px;
+    left: 20px;
 }
 
 nav a i {

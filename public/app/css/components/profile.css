@@ -10,7 +10,6 @@ section#profile .wrapper {
 }
 
 section#profile a {
-    background-color: var(--primary-color);
     border-radius: 2px;
     color: var(--light-color);
     display: block;
@@ -22,6 +21,14 @@ section#profile a {
     text-align: center;
     transition: background 150ms ease-out;
     width: 300px;
+}
+
+section#profile a:first-child {
+    background-color: var(--secondary-color);
+}
+
+section#profile a:last-child {
+    background-color: var(--primary-color);
 }
 
 section#profile a:hover {
