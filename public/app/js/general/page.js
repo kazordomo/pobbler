@@ -1,5 +1,6 @@
 import Profile from '../components/profile';
 import Chat from '../components/chat';
+import Custom from '../components/custom';
 import uuid from 'uuid';
 
 class Page {
@@ -23,6 +24,9 @@ class Page {
                 break;
             case 'chat':
                 new Chat({ id: uuid(), name: uuid() });
+                break;
+            case 'custom':
+                new Custom();
                 break;
             default:
                 return false;

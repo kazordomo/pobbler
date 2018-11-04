@@ -2,11 +2,13 @@ class Chat {
 
     constructor(user) {
 
+        this.DOMElement = document.querySelector('section#chat');
+
         this.user = user;
         this.isTypingBool = false;
         this.timeout = null;
 
-        this.msg_el_input = document.getElementById('chat_message');
+        this.msg_el_input = document.getElementById('section#chat chat_message');
         this.msgs_el_container = document.querySelector('section#chat .messages');
 
         this.socket = io();
@@ -17,7 +19,7 @@ class Chat {
     init () {
 
         // Init the send button.
-        document.querySelector('.form_fields button').addEventListener('click', () => {
+        this.DOMElement.querySelector('.form_fields button').addEventListener('click', () => {
             this.send(this.msg_el_input.value)
         });
 
@@ -34,18 +36,12 @@ class Chat {
             this.isTyping(user);
         });
         this.socket.on('is not typing', () => {
-            console.log('We need to broadcast this!!!!');
+            // TODO:
         });
     }
 
     send (message) {
         this.socket.emit('message', { user: this.user.id, message });
-        
-        // ?
-        if(this.isTypingBool) {
-            this.isTypingTimeout();
-            this.isTypingBool = false;
-        }
 
         // Reset the text-input.
         this.msg_el_input.value = '';
@@ -59,6 +55,8 @@ class Chat {
         let rowEl = document.createElement('div')
         let messageEl = document.createElement('div');
 
+        this.isTypingTimeout();
+
         rowEl.className = 'row';
         messageEl.className = `message ${userClass}`;
         messageEl.innerHTML = message;
@@ -67,7 +65,7 @@ class Chat {
         this.msgs_el_container.appendChild(rowEl);
     }
 
-    isTypingTimeout () {
+    isTypingTimeout (isUser) {
 
         // Ignore the rest of the function if user is stil typing.
         if(!this.isTypingBool)
@@ -75,16 +73,18 @@ class Chat {
 
         this.isTypingBool = false;
 
+        // TODO: user "ifUser" to check instead of the element
         if(this.msgs_el_container.querySelector('.is_typing')) {
-            // Remove the "is typing" element if there is no more typing.
             this.msgs_el_container.removeChild(this.msgs_el_container.querySelector('.is_typing'));
         }
-        
+
         this.socket.emit('is not typing');
     }
 
     isTyping (user) {
 
+        // TODO: Fix this part
+        
         // If typing-timeout already begun, refresh it.
         if(this.isTypingBool) {
             clearTimeout(this.timeout);
@@ -115,7 +115,7 @@ class Chat {
         }
 
         // Check every third second if user is typing
-        this.timeout = setTimeout(() => this.isTypingTimeout(), 3000);
+        this.timeout = setTimeout(() => this.isTypingTimeout(isUser), 3000);
     }
 
 }

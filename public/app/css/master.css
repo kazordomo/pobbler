@@ -5,6 +5,7 @@
 }
 
 body {
+    background-color: #F2F8FA;
     margin: 0;
     padding: 0;
 }
@@ -38,6 +39,7 @@ main {
     --primary-color: #010f26;
     --secondary-color: #006EFF;
     --light-color: #ffffff;
+    --gray-color: #C9C9C9;
 }
 
 .wrapper,

@@ -1,9 +1,12 @@
 nav {
-    background-color: var(--primary-color);
-    color: var(--light-color);
+    background-color: var(--light-color);
+    color: var(--primary-color);
     height: 100px;
     padding: 0px 50px;
     position: relative;
+    -webkit-box-shadow: 0px 2px 11px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 11px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 11px 0px rgba(0,0,0,0.75);
 }
 
 nav h2 {
@@ -40,7 +43,7 @@ nav a span {
 }
 
 nav a i {
-    color: var(--light-color);
+    color: var(--primary-color);
     cursor: pointer;
     font-size: 30px;
 }
