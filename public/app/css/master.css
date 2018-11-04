@@ -40,6 +40,12 @@ main {
     --secondary-color: #006EFF;
     --light-color: #ffffff;
     --gray-color: #C9C9C9;
+
+    --dark-purple: #2E294E;
+    --pink: #EFBCD5;
+    --violet: #BE97C6;
+    --purple: #8661C1;
+    --space-dark: #4B5267;
 }
 
 .wrapper,
@@ -55,4 +61,17 @@ main {
 
 .wrapper_large {
     width: 1200px;
+}
+
+.row {
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--pink); 
 }

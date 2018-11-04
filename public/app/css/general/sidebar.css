@@ -1,0 +1,105 @@
+#sidebar {
+    background-color: var(--dark-purple);
+    color: #FFFFFF;
+    bottom: 0;
+    position: fixed;
+    top: 0;
+    width: 40%;
+}
+
+#sidebar .new {
+    opacity: 0.6;
+    padding: 50px;
+}
+
+#sidebar .new i {
+    margin-right: 10px;
+}
+
+#sidebar .new div {
+    cursor: pointer;
+}
+
+/* NAV */
+
+nav {
+    height: 10vh;
+    padding: 50px;
+    width: 100%;
+}
+
+nav .right {
+    float: right;
+}
+
+nav .right a {
+    margin-left: 50px;
+}
+
+nav a i {
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+/* CHATS */
+
+#sidebar .chats {
+    /* vh - padding */
+    height: calc(90vh - 172px);
+    overflow: auto;
+}
+
+#sidebar .row {
+    cursor: pointer;
+    height: 100px;
+    margin-bottom: 50px;
+    padding: 0 50px;
+    transition: background-color 150ms ease-out;
+}
+
+#sidebar .chats .row:hover h4,
+#sidebar .chats .row:hover div {
+    /* background-color: rgba(239, 188, 213, 0.2); */
+    color: var(--pink);
+    opacity: 1;
+}
+
+#sidebar .chats .row:last-child {
+    margin-bottom: 0;
+}
+
+#sidebar .chats .row .avatar {
+    background: url(../../img/zstock.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin-right: 50px;
+    height: 100px;
+    width: 100px;
+}
+
+#sidebar .chats .row h4,
+#sidebar .chats .row .avatar {
+    float: left;
+}
+
+#sidebar .chats .row .upper {
+    line-height: 50px;
+}
+
+#sidebar .chats .row .upper div {
+    opacity: 0.6;
+    float: right;
+}
+
+#sidebar .chats .row .upper,
+#sidebar .chats .row .lower {
+    height: 50px;
+    width: 100%;
+}
+
+#sidebar .chats .row .lower div {
+    opacity: 0.6;
+}
