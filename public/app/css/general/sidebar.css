@@ -46,14 +46,14 @@ nav a i {
 /* CHATS */
 
 #sidebar .chats {
-    /* vh - padding */
-    height: calc(90vh - 172px);
+    /* vh (-10vh) - padding */
+    height: calc(80vh - 181px);
     overflow: auto;
 }
 
 #sidebar .row {
     cursor: pointer;
-    height: 100px;
+    height: 75px;
     margin-bottom: 50px;
     padding: 0 50px;
     transition: background-color 150ms ease-out;
@@ -76,8 +76,19 @@ nav a i {
     background-position: center;
     border-radius: 50%;
     margin-right: 50px;
-    height: 100px;
-    width: 100px;
+    height: 75px;
+    width: 75px;
+}
+
+#sidebar .chats .row .alert {
+    background-color: var(--alert);
+    border-radius: 50%;
+    float: right;
+    font-weight: 700;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    width: 25px;
 }
 
 #sidebar .chats .row h4,
@@ -95,11 +106,17 @@ nav a i {
 }
 
 #sidebar .chats .row .upper,
+#sidebar .chats .row .lower,
+#sidebar .chats .row h4 {
+    height: 37.5px;
+}
+
+#sidebar .chats .row .upper,
 #sidebar .chats .row .lower {
-    height: 50px;
     width: 100%;
 }
 
 #sidebar .chats .row .lower div {
+    font-size: 15px;
     opacity: 0.6;
 }

@@ -1,5 +1,8 @@
 section#profile {
+    float: right;
     height: 100vh;
+    position: relative;
+    width: 60%;
 }
 
 section#profile .wrapper {
