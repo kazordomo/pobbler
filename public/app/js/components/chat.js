@@ -8,7 +8,7 @@ class Chat {
         this.isTypingBool = false;
         this.timeout = null;
 
-        this.msg_el_input = document.getElementById('section#chat chat_message');
+        this.msg_el_input = document.getElementById('chat_message');
         this.msgs_el_container = document.querySelector('section#chat .messages');
 
         this.socket = io();
@@ -18,15 +18,26 @@ class Chat {
 
     init () {
 
-        // Init the send button.
-        this.DOMElement.querySelector('.form_fields button').addEventListener('click', () => {
-            this.send(this.msg_el_input.value)
-        });
+        this.DOMElement.querySelector('button').addEventListener('click', () => {
 
-        // Init the text input.
-        this.msg_el_input.addEventListener('input', () => {
-            this.socket.emit('typing', this.user.id);
+            this.newChat();
+
         })
+
+    }
+
+    newChat () {
+
+        // Init the send button.
+        this.msg_el_input.addEventListener('keydown', event => {
+
+            this.socket.emit('typing', this.user.id);
+
+            if(event.key === 'Enter') {
+                this.send(this.msg_el_input.value);
+            }
+
+        });
 
         // Init the socket listeners.
         this.socket.on('message', (user, message) => {
@@ -65,7 +76,7 @@ class Chat {
         this.msgs_el_container.appendChild(rowEl);
     }
 
-    isTypingTimeout (isUser) {
+    isTypingTimeout () {
 
         // Ignore the rest of the function if user is stil typing.
         if(!this.isTypingBool)

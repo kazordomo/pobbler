@@ -1,10 +1,49 @@
+section#chat {
+    box-sizing: border-box;
+    float: right;
+    height: 100vh;
+    padding: 50px 80px;
+    position: relative;
+    width: 60%;
+}
+
+section#chat a {
+    border-radius: 2px;
+    color: var(--light-color);
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    height: 75px;
+    margin: 10px auto;
+    line-height: 75px;
+    text-align: center;
+    transition: background 150ms ease-out;
+    width: 300px;
+}
+
+section#chat a:first-child {
+    background-color: var(--secondary-color);
+}
+
+section#chat a:last-child {
+    background-color: var(--primary-color);
+}
+
+section#chat a:hover {
+    background-color: #032863;
+}
+
 section#chat .row {
     height: 100px;
 }
 
+section#chat .button_group {
+    /* display: none; */
+}
+
 .message {
     border-radius: 30px;
-    color: var(--light-color);
+    color: #FFFFFF;
     font-size: 18px;
     padding: 30px;
     width: 48%;
@@ -20,22 +59,22 @@ section#chat .row {
 }
 
 .user_message {
-    background-color: var(--primary-color);
+    background-color: var(--pink);
     float: left;
 }
 
 .friend_message {
-    background-color: var(--secondary-color);
+    background-color: var(--purple);
     float: right;
 }
 
 .form_fields {
     bottom: 30px;
-    left: 0;
     margin: 0 auto;
     position: fixed;
-    right: 0;
-    width: 1200px;
+    right: 80px;
+    /* section length - right + section-padding */
+    width: calc(60% - 160px);
 }
 
 .form_fields button,
@@ -53,8 +92,9 @@ input#chat_message {
 }
 
 input#chat_message {
-    background-color: #eee;
-    border-radius: 30px;
+    background-color: rgba(0,0,0,0.4);
+    color: var(--purple);
     padding: 30px;
-    width: 80%;
+    right: 0;
+    width: 100%;
 }
